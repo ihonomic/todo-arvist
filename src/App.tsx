@@ -79,8 +79,8 @@ function App() {
   };
 
   return (
-    <React.Fragment>
-      <Container className="background">
+    <div className="background">
+      <Container>
         <Typography
           variant="h4"
           component="h2"
@@ -100,7 +100,7 @@ function App() {
           <Stack alignItems={"center"}>
             {/* Uncompleted tasks  */}
             <Typography
-              variant="subtitle2"
+              variant="h6"
               component="h2"
               align="center"
               color={"primary"}
@@ -128,7 +128,7 @@ function App() {
 
             {/* Completed tasks  */}
             <Typography
-              variant="subtitle2"
+              variant="h6"
               component="h2"
               align="center"
               color={"primary"}
@@ -155,7 +155,7 @@ function App() {
           </Stack>
         </div>
       </Container>
-    </React.Fragment>
+    </div>
   );
 }
 

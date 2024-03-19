@@ -56,10 +56,11 @@ const Tasks = ({
                 placeholder={task.text}
                 value={editText}
                 onChange={(e: any) => setEditText(e.currentTarget.value)}
-                style={{
-                  height: 12,
-                  fontSize: 12,
-                }}
+                style={
+                  {
+                    // height: 12,
+                  }
+                }
                 color="primary"
               />
 
@@ -68,10 +69,7 @@ const Tasks = ({
                 aria-label="onEdit"
                 onClick={() => onEdit(task.id)}
               >
-                <DownloadDoneIcon
-                  style={{ width: 12, height: 12 }}
-                  color={"primary"}
-                />
+                <DownloadDoneIcon color={"primary"} />
               </IconButton>
             </Stack>
           ) : (
@@ -82,7 +80,7 @@ const Tasks = ({
               style={{ marginBottom: 12 }}
             >
               <Typography
-                variant="body2"
+                variant="subtitle1"
                 component="h2"
                 align="center"
                 color={"primary"}
@@ -97,10 +95,7 @@ const Tasks = ({
                   aria-label="onDelete"
                   onClick={() => onDelete(task.id)}
                 >
-                  <RemoveCircleOutlineIcon
-                    style={{ width: 12, height: 12 }}
-                    color={"error"}
-                  />
+                  <RemoveCircleOutlineIcon color={"error"} />
                 </IconButton>
 
                 {pending && (
@@ -113,10 +108,7 @@ const Tasks = ({
                       setEditText(task.text);
                     }}
                   >
-                    <EditIcon
-                      style={{ width: 12, height: 12 }}
-                      color={"primary"}
-                    />
+                    <EditIcon color={"primary"} />
                   </IconButton>
                 )}
 
@@ -125,10 +117,7 @@ const Tasks = ({
                   aria-label="onCompleted"
                   onClick={() => onCompleted(task.id)}
                 >
-                  <DoneAllIcon
-                    style={{ width: 12, height: 12 }}
-                    color={"primary"}
-                  />
+                  <DoneAllIcon color={"primary"} />
                 </IconButton>
               </Stack>
             </Stack>
